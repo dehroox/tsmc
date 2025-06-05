@@ -1,5 +1,5 @@
 const hello = "HELLO";
-let x: string;
+let x : string;
 
 x = "you";
 console.log(hello + x);

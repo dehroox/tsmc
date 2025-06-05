@@ -5,6 +5,18 @@ import (
 )
 
 func LexData(src string) []string {
-	final := make([]string, len(strings.Fields(src)))
+	nonWhitespaced := strings.Fields(src)
+	final := make([]string, 0)
+
+	for i := range nonWhitespaced {
+		switch nonWhitespaced[i] {
+		case "const":
+			final = append(final, Token{Const, Keyword, "", ""}.ToString())
+
+		}
+
+		print(i)
+	}
+
 	return final
 }
